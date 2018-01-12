@@ -1,21 +1,18 @@
 {
-  "name": "jitsi-meet-electron-utils",
-  "version": "0.2.0",
-  "description": "Utilities for jitsi-meet-electron project",
-  "main": "index.js",
-  "scripts": {
-    "lint": "eslint .",
-    "validate": "npm ls",
-    "install": "node-gyp rebuild"
+  "name":"jitsi-meet-electron-utils",
+  "version":"0.2.0",
+  "description":"Utilities for jitsi-meet-electron project",
+  "main":"index.js",
+  "scripts":{
+    "lint":"eslint .",
+    "validate":"npm ls",
+    "install":"prebuild-install || node-gyp rebuild"
   },
-  "pre-commit": [
+  "pre-commit":[
     "lint"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/jitsi/jitsi-meet-electron-utils"
-  },
-  "keywords": [
+  "repository":"https://www.github.com/MarshallOfSound/jitsi-meet-electron-utils",
+  "keywords":[
     "jingle",
     "webrtc",
     "xmpp",
@@ -23,18 +20,20 @@
     "jitsi-meet",
     "utils"
   ],
-  "author": "",
-  "readmeFilename": "README.md",
-  "license": "Apache-2.0",
-  "gypfile": true,
-  "dependencies": {
-    "nan": "^2.2.1",
-    "robotjs": "jitsi/robotjs#jitsi",
-    "postis": "^2.2.0"
+  "author":"",
+  "readmeFilename":"README.md",
+  "license":"Apache-2.0",
+  "gypfile":true,
+  "dependencies":{
+    "nan":"^2.2.1",
+    "postis":"^2.2.0",
+    "prebuild-install":"^2.4.1",
+    "robotjs":"jitsi/robotjs#jitsi"
   },
-  "devDependencies": {
-    "eslint": ">=3",
-    "eslint-plugin-jsdoc": "*",
-    "precommit-hook": "3.0.0"
+  "devDependencies":{
+    "eslint":">=3",
+    "eslint-plugin-jsdoc":"*",
+    "prebuild":"^7.0.0",
+    "precommit-hook":"3.0.0"
   }
 }
